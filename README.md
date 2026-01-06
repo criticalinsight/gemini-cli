@@ -1,16 +1,10 @@
-# Gemini CLI
+# Claude Code Gemini CLI
 
-[![Gemini CLI CI](https://github.com/google-gemini/gemini-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/google-gemini/gemini-cli/actions/workflows/ci.yml)
-[![Gemini CLI E2E (Chained)](https://github.com/google-gemini/gemini-cli/actions/workflows/chained_e2e.yml/badge.svg)](https://github.com/google-gemini/gemini-cli/actions/workflows/chained_e2e.yml)
-[![Version](https://img.shields.io/npm/v/@google/gemini-cli)](https://www.npmjs.com/package/@google/gemini-cli)
+[![Claude Code Gemini CLI CI](https://github.com/google-gemini/gemini-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/google-gemini/gemini-cli/actions/workflows/ci.yml)
+[![Version](https://img.shields.io/npm/v/claude-code-gemini-cli)](https://www.npmjs.com/package/claude-code-gemini-cli)
 [![License](https://img.shields.io/github/license/google-gemini/gemini-cli)](https://github.com/google-gemini/gemini-cli/blob/main/LICENSE)
-[![View Code Wiki](https://www.gstatic.com/_/boq-sdlc-agents-ui/_/r/YUi5dj2UWvE.svg)](https://codewiki.google/github.com/google-gemini/gemini-cli)
 
-![Gemini CLI Screenshot](./docs/assets/gemini-screenshot.png)
-
-Gemini CLI is an open-source AI agent that brings the power of Gemini directly
-into your terminal. It provides lightweight access to Gemini, giving you the
-most direct path from your prompt to our model.
+Claude Code Gemini CLI is a premium, open-source AI agentic coding tool that lives in your terminal. It combines the powerful agentic philosophy of Claude Code with the state-of-the-art intelligence of Google's Gemini models. It understands your codebase, iterates on designs, and autonomously implements features.
 
 Learn all about Gemini CLI in our [documentation](https://geminicli.com/docs/).
 
@@ -25,6 +19,32 @@ Learn all about Gemini CLI in our [documentation](https://geminicli.com/docs/).
   integrations.
 - **💻 Terminal-first**: Designed for developers who live in the command line.
 - **🛡️ Open source**: Apache 2.0 licensed.
+
+## Why Claude Code Gemini CLI?
+
+This project is a premium evolution of the official Gemini CLI, designed to bring the **agentic workflow philosophy** of Anthropic's Claude Code to the Google Gemini ecosystem.
+
+### Improvements over Official Gemini CLI
+
+- **Agentic Workflows:** Beyond simple chat, use `claude-gemini feature-dev` to let the AI plan, execute, and verify entire features autonomously.
+- **Design Doctor (Auto-Fixer):** If your build or tests fail, the AI automatically detects the error, proposes a fix, and verifies it until it works.
+- **Local Persistence:** Complex multi-turn workflows are saved locally. You can stop and resume agentic tasks at any time without losing context.
+- **Deep IDE Context:** Automatically pulls context from your VS Code or Antigravity workspace (open files, selections, cursor position) for hyper-relevant responses.
+- **Advanced Tools:** Full support for `grep`, `glob`, `shell`, and `mcp` servers, allowing the agent to interact with your environment like a real engineer.
+
+### Comparison with Anthropic Claude Code
+
+| Feature | Official Gemini CLI | Claude Code (Anthropic) | Claude Code Gemini CLI |
+| :--- | :---: | :---: | :---: |
+| **Model** | Gemini | Claude | **Gemini** |
+| **Agentic Tool-Use** | Basic | Advanced | **Advanced** |
+| **Auto-Fixing** | No | Yes | **Yes (Design Doctor)** |
+| **Resume State** | No | Yes | **Yes** |
+| **OS Support** | Cross-platform | Cross-platform | **Windows Optimized** |
+| **IDE Companion** | Basic | None | **Rich Integration** |
+
+> [!NOTE]
+> While Claude Code is highly optimized for Anthropic's Claude 3.5 Sonnet, this tool brings that same high-agency experience to **Gemini 2.0 Flash/Pro**, offering a powerful alternative for developers within the Google Cloud/Vertex ecosystem.
 
 ## 📦 Installation
 
@@ -45,7 +65,7 @@ npx https://github.com/google-gemini/gemini-cli
 #### Install globally with npm
 
 ```bash
-npm install -g @google/gemini-cli
+npm install -g claude-code-gemini-cli
 ```
 
 #### Install globally with Homebrew (macOS/Linux)
@@ -65,7 +85,7 @@ releases will not have been fully vetted and may contain regressions or other
 outstanding issues. Please help us test and install with `preview` tag.
 
 ```bash
-npm install -g @google/gemini-cli@preview
+npm install -g claude-code-gemini-cli@preview
 ```
 
 ### Stable
@@ -75,7 +95,7 @@ npm install -g @google/gemini-cli@preview
   and validations. Use `latest` tag.
 
 ```bash
-npm install -g @google/gemini-cli@latest
+npm install -g claude-code-gemini-cli@latest
 ```
 
 ### Nightly
@@ -85,7 +105,7 @@ npm install -g @google/gemini-cli@latest
   there are pending validations and issues. Use `nightly` tag.
 
 ```bash
-npm install -g @google/gemini-cli@nightly
+npm install -g claude-code-gemini-cli@nightly
 ```
 
 ## 📋 Key Features
@@ -147,16 +167,14 @@ for details)
 #### Start Gemini CLI, then choose _Login with Google_ and follow the browser authentication flow when prompted
 
 ```bash
-gemini
-```
+claude-gemini```
 
 #### If you are using a paid Code Assist License from your organization, remember to set the Google Cloud Project
 
 ```bash
 # Set your Google Cloud Project
 export GOOGLE_CLOUD_PROJECT="YOUR_PROJECT_ID"
-gemini
-```
+claude-gemini```
 
 ### Option 2: Gemini API Key
 
@@ -171,8 +189,7 @@ gemini
 ```bash
 # Get your key from https://aistudio.google.com/apikey
 export GEMINI_API_KEY="YOUR_API_KEY"
-gemini
-```
+claude-gemini```
 
 ### Option 3: Vertex AI
 
@@ -188,8 +205,7 @@ gemini
 # Get your key from Google Cloud Console
 export GOOGLE_API_KEY="YOUR_API_KEY"
 export GOOGLE_GENAI_USE_VERTEXAI=true
-gemini
-```
+claude-gemini```
 
 For Google Workspace accounts and other authentication methods, see the
 [authentication guide](./docs/get-started/authentication.md).
@@ -201,19 +217,18 @@ For Google Workspace accounts and other authentication methods, see the
 #### Start in current directory
 
 ```bash
-gemini
-```
+claude-claude-gemini```
 
 #### Include multiple directories
 
 ```bash
-gemini --include-directories ../lib,../docs
+claude-gemini --include-directories ../lib,../docs
 ```
 
 #### Use specific model
 
 ```bash
-gemini -m gemini-2.5-flash
+claude-gemini -m claude-gemini-2.5-flash
 ```
 
 #### Non-interactive mode for scripts
@@ -221,21 +236,21 @@ gemini -m gemini-2.5-flash
 Get a simple text response:
 
 ```bash
-gemini -p "Explain the architecture of this codebase"
+claude-gemini -p "Explain the architecture of this codebase"
 ```
 
 For more advanced scripting, including how to parse JSON and handle errors, use
 the `--output-format json` flag to get structured output:
 
 ```bash
-gemini -p "Explain the architecture of this codebase" --output-format json
+claude-gemini -p "Explain the architecture of this codebase" --output-format json
 ```
 
 For real-time event streaming (useful for monitoring long-running operations),
 use `--output-format stream-json` to get newline-delimited JSON events:
 
 ```bash
-gemini -p "Run tests and deploy" --output-format stream-json
+claude-gemini -p "Run tests and deploy" --output-format stream-json
 ```
 
 ### Quick Examples
@@ -244,8 +259,7 @@ gemini -p "Run tests and deploy" --output-format stream-json
 
 ```bash
 cd new-project/
-gemini
-> Write me a Discord bot that answers questions using a FAQ.md file I will provide
+claude-gemini> Write me a Discord bot that answers questions using a FAQ.md file I will provide
 ```
 
 #### Analyze existing code
@@ -253,8 +267,7 @@ gemini
 ```bash
 git clone https://github.com/google-gemini/gemini-cli
 cd gemini-cli
-gemini
-> Give me a summary of all of the changes that went in yesterday
+claude-gemini> Give me a summary of all of the changes that went in yesterday
 ```
 
 ## 📚 Documentation
@@ -351,7 +364,7 @@ for planned features and priorities.
 
 - **[Official Roadmap](./ROADMAP.md)** - See what's coming next.
 - **[Changelog](./docs/changelogs/index.md)** - See recent notable updates.
-- **[NPM Package](https://www.npmjs.com/package/@google/gemini-cli)** - Package
+- **[NPM Package](https://www.npmjs.com/package/claude-code-gemini-cli)** - Package
   registry.
 - **[GitHub Issues](https://github.com/google-gemini/gemini-cli/issues)** -
   Report bugs or request features.

@@ -1,6 +1,17 @@
 {
-  "name": "@google/gemini-cli",
+  "name": "claude-code-gemini-cli",
   "version": "0.24.0-nightly.20251227.37be16243",
+  "description": "Claude Code Gemini CLI - The ultimate agentic coding tool combining Anthropic's Claude Code philosophy with Google's Gemini intelligence.",
+  "keywords": [
+    "claude code",
+    "gemini",
+    "ai agent",
+    "coding assistant",
+    "mcp",
+    "autocoder",
+    "anthropic",
+    "google gemini"
+  ],
   "engines": {
     "node": ">=20.0.0"
   },
@@ -58,6 +69,7 @@
     "release:version": "node scripts/version.js",
     "telemetry": "node scripts/telemetry.js",
     "check:lockfile": "node scripts/check-lockfile.js",
+    "dist:win": "bun build bundle/gemini.js --compile --outfile dist/claude-gemini.exe",
     "clean": "node scripts/clean.js",
     "pre-commit": "node scripts/pre-commit.js"
   },
@@ -69,7 +81,7 @@
     }
   },
   "bin": {
-    "gemini": "bundle/gemini.js"
+    "claude-gemini": "bundle/gemini.js"
   },
   "files": [
     "bundle/",
@@ -77,6 +89,7 @@
     "LICENSE"
   ],
   "devDependencies": {
+    "pkg": "^5.8.1",
     "@octokit/rest": "^22.0.0",
     "@types/marked": "^5.0.2",
     "@types/mime-types": "^3.0.1",

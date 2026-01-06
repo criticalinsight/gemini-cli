@@ -1,7 +1,7 @@
 {
-  "name": "gemini-cli-vscode-ide-companion",
-  "displayName": "Gemini CLI Companion",
-  "description": "Enable Gemini CLI with direct access to your IDE workspace.",
+  "name": "claude-code-gemini-cli-vscode-ide-companion",
+  "displayName": "Claude Code Gemini CLI Companion",
+  "description": "Premium IDE companion for Claude Code Gemini CLI - Experience Anthropic-style agentic coding with Gemini.",
   "version": "0.24.0-nightly.20251227.37be16243",
   "publisher": "google",
   "icon": "assets/icon.png",
@@ -19,25 +19,25 @@
     "AI"
   ],
   "keywords": [
-    "gemini-cli",
-    "gemini cli",
+    "claude-code",
     "gemini",
-    "gemini code",
-    "cli",
-    "ide integration",
-    "ide companion"
+    "ai-agent",
+    "developer-tools",
+    "agentic-coding",
+    "mcp",
+    "ide-integration"
   ],
   "activationEvents": [
     "onStartupFinished"
   ],
   "contributes": {
     "configuration": {
-      "title": "Gemini CLI",
+      "title": "Claude Code Gemini CLI",
       "properties": {
         "gemini-cli.debug.logging.enabled": {
           "type": "boolean",
           "default": false,
-          "description": "Enable detailed logging for debugging the Gemini CLI Companion."
+          "description": "Enable detailed logging for debugging the Claude Code Gemini CLI Companion."
         }
       }
     },
@@ -49,21 +49,21 @@
     "commands": [
       {
         "command": "gemini.diff.accept",
-        "title": "Gemini CLI: Accept Diff",
+        "title": "Claude Code Gemini CLI: Accept Diff",
         "icon": "$(check)"
       },
       {
         "command": "gemini.diff.cancel",
-        "title": "Gemini CLI: Close Diff Editor",
+        "title": "Claude Code Gemini CLI: Close Diff Editor",
         "icon": "$(close)"
       },
       {
         "command": "gemini-cli.runGeminiCLI",
-        "title": "Gemini CLI: Run"
+        "title": "Claude Code Gemini CLI: Run"
       },
       {
         "command": "gemini-cli.showNotices",
-        "title": "Gemini CLI: View Third-Party Notices"
+        "title": "Claude Code Gemini CLI: View Third-Party Notices"
       }
     ],
     "menus": {
